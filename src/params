@@ -1,11 +1,73 @@
 <?xml version="1.0"?>
 <xml>
-	<font path="/usr/lib/enigma2/python/Plugins/Extensions/DreamPlex/skin/mayatypeuitvg.ttf" size="100" name="Modern" />
-	<font path="/usr/lib/enigma2/python/Plugins/Extensions/DreamPlex/skin/goodtime.ttf" size="100"  name="Named" /> 
-	<font path="/usr/lib/enigma2/python/Plugins/Extensions/DreamPlex/skin/saint.ttf" size="100" name="Saint" />
+	<!-- FONTS SECTION -->
+	<font path="/usr/lib/enigma2/python/Plugins/Extensions/DreamPlex/skins/BlackDon/mayatypeuitvg.ttf" size="100" name="Modern" />
+	<font path="/usr/lib/enigma2/python/Plugins/Extensions/DreamPlex/skins/BlackDon/goodtime.ttf" size="100"  name="Named" /> 
+	<font path="/usr/lib/enigma2/python/Plugins/Extensions/DreamPlex/skins/BlackDon/saint.ttf" size="100" name="Saint" />
 	
-    <view name="DP_ViewList" itemsPerPage="6"/>
-    <view name="DP_ViewBackdrop" itemsPerPage="8"/>
-    <view name="DP_ViewListLong" itemsPerPage="14"/>
-    <view name="DP_ViewMusic" itemsPerPage="6"/>
+	<!-- SEEN/UNSEEN VISUS -->
+	<seenPic path="/usr/lib/enigma2/python/Plugins/Extensions/DreamPlex/skins/BlackDon/icons/seen-fs8.png" />
+	<startedPic path="/usr/lib/enigma2/python/Plugins/Extensions/DreamPlex/skins/BlackDon/icons/started-fs8.png" />
+	<unseenPic path="/usr/lib/enigma2/python/Plugins/Extensions/DreamPlex/skins/BlackDon/icons/unseen-fs8.png" />
+
+	<!-- GUI ELEMENTS -->
+	<guiElement name="key_red" path="/usr/lib/enigma2/python/Plugins/Extensions/DreamPlex/skins/BlackDon/1280x720/buttons/red.png" />
+	<guiElement name="key_green" path="/usr/lib/enigma2/python/Plugins/Extensions/DreamPlex/skins/BlackDon/1280x720/buttons/green.png" />
+	<guiElement name="key_blue" path="/usr/lib/enigma2/python/Plugins/Extensions/DreamPlex/skins/BlackDon/1280x720/buttons/blue.png" />
+	<guiElement name="key_yellow" path="/usr/lib/enigma2/python/Plugins/Extensions/DreamPlex/skins/BlackDon/1280x720/buttons/yellow.png"/>
+	<guiElement name="key_pvr" path="/usr/lib/enigma2/python/Plugins/Extensions/DreamPlex/skins/BlackDon/all/pvr.png" />
+	<guiElement name="key_menu" path="/usr/lib/enigma2/python/Plugins/Extensions/DreamPlex/skins/BlackDon/all/menu.png" />
+	<guiElement name="key_zero" path="/usr/lib/enigma2/python/Plugins/Extensions/DreamPlex/skins/BlackDon/all/key_0.png" />
+	<guiElement name="key_nine" path="/usr/lib/enigma2/python/Plugins/Extensions/DreamPlex/skins/BlackDon/all/key_9.png" />
+
+	<!-- MOVIE VIEWS -->
+	<movieView name="List" apiLevel="1" itemsPerPage="6" screen="DPS_ViewList" backdropVideos="False">
+	<element name="tag" visible="False" />
+	</movieView>
+	
+	<movieView name="long List" apiLevel="1" itemsPerPage="14" screen="DPS_ViewListLong" backdropVideos="False">
+		<element name="backdrop" visible="False"/>
+	</movieView>
+	
+	<movieView name="Backdrop" apiLevel="1" itemsPerPage="8" screen="DPS_ViewBackdrop" backdropVideos="True">
+	    <element name="backdrop" visible="True" height="720" width="1280" postfix="_backdrop_1280x720.jpg"/>	
+	</movieView>
+	
+	<!-- SHOW VIEWS
+		IMPORTANT if something is visible in the screen before dont add it again with visible
+		only change things from one screen to the other what really changed their visibilty or position
+	-->
+	<showView name="long List" apiLevel="1" itemsPerPage="11" screen="DPS_ViewListLong" backdropVideos="False">
+		<subView name="ShowSeasons">
+			<element name="audio" visible="False" xCoord="300" yCoord="300"/>
+			<element name="genre" visible="False" />
+		    <element name="year" visible="False" />
+			<element name="title" xCoord="515" yCoord="282" />
+		    <element name="poster" xCoord="505" yCoord="327" />
+		    <element name="backdrop" visible="True" height="720" width="1280" postfix="_backdrop_1280x720.jpg"/>
+			<element name="shortDescription" xCoord="735" yCoord="317" />
+		    <element name="runtime" visible="False" />
+		    <element name="rated" visible="False" />
+		    <element name="total" visible="False" />
+		</subView>
+		
+		<subView name="ShowEpisodes">
+			<element name="audio" visible="False"/>
+		    <element name="genre" visible="True" xCoord="585" yCoord="295" />
+		    <element name="title" xCoord="515" yCoord="190" />
+			<element name="year" visible="True" xCoord="840" yCoord="235" />
+		    <element name="runtime" visible="True" xCoord="740" yCoord="235" />
+		    <element name="rated" visible="True" />
+		    <element name="rating_stars" xCoord="600" yCoord="230" />
+			<element name="backdrop" visible="False" height="720" width="1280" postfix="_backdrop_1280x720.jpg"/>
+		    <element name="poster" xCoord="505" yCoord="282" />
+		    <element name="shortDescription" xCoord="735" yCoord="274" />
+		    <element name="total" visible="True" />
+		</subView>
+	</showView>
+
+	<showView name="long List" apiLevel="1" itemsPerPage="11" screen="DPS_ViewListLong" showBackdrop="False" backdropVideos="False">
+		<element name="backdrop" visible="False"/>
+	</showView>
+	
 </xml>
