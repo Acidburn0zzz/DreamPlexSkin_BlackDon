@@ -290,12 +290,15 @@
         
         <eLabel text="" zPosition="14" halign="left" position="30,356" size="345,1" backgroundColor="#5C5C5C"/>
         <widget name="current" transparent="1" zPosition="5" halign="left" valign="center" position="61,325" size="190,30" font="Saint;22" foregroundColor="#FF8C00"  backgroundColor="#000000" />
-                                        
+       
+        <widget name="subtitles" transparent="1" zPosition="-90" halign="left"  position="687,379" size="200,25" font="Saint; 22" backgroundColor="#40000000"/>                                
         <widget name="tag" transparent="1" zPosition="48" halign="center" valign="center" noWrap="1" position="35,673" size="340,26" font="Saint; 20" foregroundColor="#5C5C5C"  backgroundColor="#000000"/>
         <widget name="poster" transparent="1" zPosition="49" position="121,379" size="195,268" alphatest="blend" />
-        <widget name="backdrop" transparent="0" zPosition="45" position="525,355" size="560,315" alphatest="blend" />
+        <widget name="postertext" transparent="1" zPosition="-88" halign="left" position="716,502" size="200,40" font="Regular;22" foregroundColor="#ffffff" backgroundColor="#000000"/>
+		<widget name="backdrop" transparent="0" zPosition="45" position="525,355" size="560,315" alphatest="blend" />
+        <widget name="backdroptext" transparent="1" zPosition="4" halign="left" position="700,500" size="200,40" font="Regular;22" foregroundColor="#ffffff" backgroundColor="#40000000"/>
         
-        <widget name="functionsContainer" transparent="0" zPosition="49" position="525,355" size="560,315" backgroundColor="#000000" />
+		<widget name="functionsContainer" transparent="0" zPosition="49" position="525,355" size="560,315" backgroundColor="#000000" />
         <widget name="number_key_popup" zPosition="51" halign="left" valign="center" position="436,560" size="75,80" font="Saint;70" foregroundColor="#FF8C00" backgroundColor="#000000" />
         
         <widget name="txt_red" transparent="1" zPosition="50" halign="left" valign="top" position="700,384" size="400,32" font="Saint; 20" foregroundColor="#5C5C5C"  backgroundColor="#000000"/>
@@ -376,9 +379,11 @@
         <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/DreamPlex/skins/BlackDon/1280x720/images/default_info-fs8.png" zPosition="50" position="1200,682" size="41,16" alphatest="blend" transparent="1" />
         
         <widget name="poster" transparent="1" zPosition="6" position="601,399" size="195,268" alphatest="blend" />
-        <widget name="backdrop" transparent="0" zPosition="-2" position="0,70" size="1280,720" alphatest="blend" />   
+        <widget name="postertext" transparent="1" zPosition="4" halign="left" position="150,500" size="200,40" font="Regular;22" backgroundColor="#000000"/>
+		<widget name="backdrop" transparent="0" zPosition="-2" position="0,70" size="1280,720" alphatest="blend" />   
+        <widget name="backdroptext" transparent="1" zPosition="4" halign="left" position="700,500" size="200,40" font="Regular;22" foregroundColor="#ffffff" backgroundColor="#000000"/>
         
-        <widget name="functionsContainer" transparent="0" zPosition="85" position="570,390" size="660,320" backgroundColor="#000000" />
+		<widget name="functionsContainer" transparent="0" zPosition="85" position="570,390" size="660,320" backgroundColor="#000000" />
         <widget name="number_key_popup" zPosition="51" halign="left" valign="center" position="436,560" size="75,80" font="Saint;70" foregroundColor="#FF8C00" backgroundColor="#000000" />
         
         <widget name="txt_red" transparent="1" zPosition="86" halign="left" valign="top" position="700,399" size="400,32" font="Saint; 20" foregroundColor="#5C5C5C"  backgroundColor="#000000"/>
@@ -459,8 +464,11 @@
         <widget name="year" transparent="1" zPosition="4" halign="left" valign="center" position="1035,390" size="160,30" font="Saint; 20" foregroundColor="#ffffff" backgroundColor="#000000"/>
         
         <widget name="poster" transparent="1" zPosition="49" position="528,220" size="195,268" alphatest="blend" />        
-        <widget name="backdrop" transparent="0" zPosition="-2" position="0,0" size="1280,720" alphatest="blend" />
-        
+        <widget name="postertext" transparent="1" zPosition="4" halign="left" position="150,500" size="200,40" font="Regular;22" backgroundColor="#000000"/>
+		<widget name="backdropVideo" transparent="1" zPosition="-3" position="0,0" size="1280,720" />
+		<widget name="backdrop" transparent="0" zPosition="-2" position="0,0" size="1280,720" alphatest="blend" />
+        <widget name="backdroptext" transparent="1" zPosition="4" halign="left" position="700,500" size="200,40" font="Regular;22" foregroundColor="#ffffff" backgroundColor="#000000"/>
+       
         <widget name="functionsContainer" transparent="0" zPosition="46" position="550,510" size="720,203" backgroundColor="#000000" />
         <widget name="number_key_popup" zPosition="51" halign="left" valign="center" position="436,560" size="75,80" font="Saint;70" foregroundColor="#FF8C00" backgroundColor="#000000" />
         
